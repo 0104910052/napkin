@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.arrow-left{
+  width: 1.5rem;
+}
+
+.napkin{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.napkin-header{
+  border-bottom: 1px solid black;
+}
+
+.napkin-body{
+
+}
+
+
+.transport-segment{
+
+}
+
+.transport-segment-header{
+
+}
+
+.transport-segment-header-circle{
+  width: 1rem;
+}
+
+.transport-segment-body{
+  border-left: 3px solid black;
+}
+
+.border-black{
+  border: 1px solid black;
+}
+
+.bg-dark-blue{
+  background-color: #4545ff;
+}
