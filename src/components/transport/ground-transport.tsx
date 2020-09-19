@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import circleDry from '../../assets/images/icons/circle-dry.svg'
+import circleWet from '../../assets/images/icons/circle-wet.svg'
 
 
 interface GroundSegment {
@@ -25,7 +25,7 @@ const GroundTransport:FC<GroundTransportProps> = ({segmentInfo}: GroundTransport
     return (
         <div className={'transport-segment'}>
             <div className="transport-segment-header p-3">
-                <img src={circleDry} className={'transport-segment-header-circle'} alt="circle-dry"/>
+                <img src={circleWet} className={'transport-segment-header-circle'} alt="circle-dry"/>
                 <span className={'ml-3'}>{new Date(segmentInfo.departure).toLocaleTimeString("en-US")}</span>
             </div>
             <div className={'transport-segment-body m-3 '}>

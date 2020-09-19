@@ -25,10 +25,11 @@ const Napkin = () => {
                     </div>
 
                     {
-                        data.segments.map((segment)=>{
+                        data.segments.map((segment,index)=>{
                             return (
                                 segment.type === 'GROUND' && <GroundTransport segmentInfo={segment as any} /> ||
-                                segment.type === 'AIRPORT' && <AirportTransport /> ||
+                                    // Assuming terminal value is supposed to be in the next flight segment
+                                segment.type === 'AIRPORT' && <AirportTransport segmentInfo={segment as any} terminal={data.segments[index + 1]?.detail?.gate} /> ||
                                 segment.type === 'FLIGHT' && <FlightTransport />
                             )
                         })
