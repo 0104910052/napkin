@@ -34,8 +34,8 @@ code {
 
 }
 
-.transport-segment-header{
-
+.flight-segment-header{
+  border-bottom: 1px solid black;
 }
 
 .transport-segment-header-circle{
@@ -56,4 +56,21 @@ code {
 
 .bg-light-blue{
   background-color: #6464ff;
+}
+
+.text-085{
+  font-size: .85rem;
+}
+
+.flight-segment-icon{
+  width: 4rem;
+}
+
+.flight-transport-body{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.flight-transport-footer{
+  border-top: 1px solid black;
 }

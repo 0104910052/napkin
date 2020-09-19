@@ -5,7 +5,7 @@ interface BusynessIndicatorProps{
     value: number
 }
 
-const BussinessIndicator:FC<BusynessIndicatorProps> = ({value}:BusynessIndicatorProps) => {
+const BusynessIndicator:FC<BusynessIndicatorProps> = ({value}:BusynessIndicatorProps) => {
     return (
         <div className={'d-inline-block float-right'}>
             {
@@ -15,8 +15,8 @@ const BussinessIndicator:FC<BusynessIndicatorProps> = ({value}:BusynessIndicator
                     </div>
                     :
                     <div>
-                        <div>
-                            Not busy
+                        <div style={{backgroundColor: 'rgb(3, 252, 3)'}}>
+                            On Time
                         </div>
                     </div>
             }
@@ -24,4 +24,4 @@ const BussinessIndicator:FC<BusynessIndicatorProps> = ({value}:BusynessIndicator
     );
 };
 
-export default BussinessIndicator;
+export default BusynessIndicator;

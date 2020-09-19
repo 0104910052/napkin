@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import circleWet from '../../assets/images/icons/circle-wet.svg'
 
 
-interface GroundSegment {
+export interface GroundSegment {
     segment_id: string;
     type: string;
     origin: {

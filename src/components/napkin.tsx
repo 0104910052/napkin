@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import arrowLeft from '../assets/images/icons/back-arrow.svg'
 import data from '../data/default'
-import GroundTransport from "./transport/ground-transport";
-import AirportTransport from "./transport/airport-transport";
-import FlightTransport from "./transport/flight-transport";
+import GroundTransport, {GroundSegment} from "./transport/ground-transport";
+import AirportTransport, {AirportSegment} from "./transport/airport-transport";
+import FlightTransport, {FlightSegment} from "./transport/flight-transport";
 
 const Napkin = () => {
 
@@ -13,7 +13,7 @@ const Napkin = () => {
 
     return (
         <div className={'row'}>
-            <div className="col-2 p-0 napkin">
+            <div className="col-3 p-0 napkin">
                 <div className={'mt-4 napkin-header'}>
                     <img src={arrowLeft} className={'arrow-left'} alt=""/>
                     <h4 className={'d-inline-block ml-3 pt-1'}>Overview</h4>
@@ -27,10 +27,10 @@ const Napkin = () => {
                     {
                         data.segments.map((segment,index)=>{
                             return (
-                                segment.type === 'GROUND' && <GroundTransport segmentInfo={segment as any} /> ||
-                                    // Assuming terminal value is supposed to be in the next flight segment
-                                segment.type === 'AIRPORT' && <AirportTransport segmentInfo={segment as any} terminal={data.segments[index + 1]?.detail?.gate} /> ||
-                                segment.type === 'FLIGHT' && <FlightTransport />
+                                segment.type === 'GROUND' && <GroundTransport segmentInfo={segment as GroundSegment} /> ||
+                                // Assuming terminal value is supposed to be in the next flight segment
+                                segment.type === 'AIRPORT' && <AirportTransport segmentInfo={segment as AirportSegment} terminal={data.segments[index + 1]?.detail?.gate} /> ||
+                                segment.type === 'FLIGHT' && <FlightTransport segmentInfo={segment as FlightSegment} />
                             )
                         })
                     }

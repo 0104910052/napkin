@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import circleDry from "../../assets/images/icons/circle-dry.svg";
-import BussinessIndicator from "../misc/bussiness-indicator";
+import BussinessIndicator from "../misc/busyness-indicator";
 
-interface AirportSegment {
+export interface AirportSegment {
     segment_id: string;
     type: string;
     origin: {
