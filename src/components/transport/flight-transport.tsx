@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import circleDry from "../../assets/images/icons/circle-dry.svg";
 import planeIcon from '../../assets/images/icons/plane-icon.svg'
+// @ts-ignore
 import BusynessIndicator from "../misc/busyness-indicator";
 
 
@@ -32,13 +33,13 @@ interface FlightTransportProps {
 const FlightTransport:FC<FlightTransportProps> = ({segmentInfo}:FlightTransportProps) => {
     return (
         <div className={'transport-segment'}>
-            <div className="transport-segment-header p-3">
+            <div className="transport-segment-header">
                 <img src={circleDry} className={'transport-segment-header-circle'} alt="circle-dry"/>
-                <span className={'ml-3'}>{new Date(segmentInfo.departure).toLocaleTimeString("en-US")}</span>
+                <span className={'ml-3'}>{new Date(segmentInfo.departure).toLocaleTimeString("en-US", {hour: '2-digit', minute:'2-digit'})}</span>
             </div>
             <div className={'transport-segment-body m-3 '}>
                 <div className={'ml-3 border-black'}>
-                    <div className={'flight-segment-header d-flex flex-wrap'}>
+                    <div className={'flight-segment-header d-flex flex-wrap bg-light-blue'}>
                         <div className={'d-inline-block'}>
                             {segmentInfo.detail.flight_number}
                         </div>
@@ -51,7 +52,7 @@ const FlightTransport:FC<FlightTransportProps> = ({segmentInfo}:FlightTransportP
                         <img className={'flight-segment-icon mx-3'} src={planeIcon} alt=""/>
                         {segmentInfo.destination.value}
                     </div>
-                    <div className={'flight-transport-footer'}>
+                    <div className={'flight-transport-footer bg-light-blue'}>
                         <div className={'d-inline-block'}>
                             Gate: {segmentInfo.detail.gate.replace('C','')}
                         </div>

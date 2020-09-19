@@ -13,8 +13,8 @@ const Napkin = () => {
 
     return (
         <div className={'row'}>
-            <div className="col-3 p-0 napkin">
-                <div className={'mt-4 napkin-header'}>
+            <div className="col-2 p-0 napkin">
+                <div className={'mt-2 napkin-header p-4'}>
                     <img src={arrowLeft} className={'arrow-left'} alt=""/>
                     <h4 className={'d-inline-block ml-3 pt-1'}>Overview</h4>
                 </div>

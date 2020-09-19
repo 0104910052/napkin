@@ -19,6 +19,7 @@ code {
 .napkin{
   border-left: 1px solid black;
   border-right: 1px solid black;
+  height: 100vh;
 }
 
 .napkin-header{
@@ -42,6 +43,11 @@ code {
   width: 1rem;
 }
 
+.transport-segment-header{
+  padding-left: .65rem;
+  margin-top: 2rem;
+}
+
 .transport-segment-body{
   border-left: 3px solid black;
 }
@@ -51,11 +57,11 @@ code {
 }
 
 .bg-dark-blue{
-  background-color: #4545ff;
+  background-color: rgb(23,23,255);
 }
 
 .bg-light-blue{
-  background-color: #6464ff;
+  background-color: rgba(23,23,255, .65);
 }
 
 .text-085{

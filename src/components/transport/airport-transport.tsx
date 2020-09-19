@@ -23,9 +23,9 @@ interface AirportTransportProps {
 const AirportTransport: FC<AirportTransportProps> = ({segmentInfo, terminal}:AirportTransportProps) => {
     return (
         <div className={'transport-segment'}>
-            <div className="transport-segment-header p-3">
+            <div className="transport-segment-header">
                 <img src={circleDry} className={'transport-segment-header-circle'} alt="circle-dry"/>
-                <span className={'ml-3'}>{new Date(segmentInfo.departure).toLocaleTimeString("en-US")}</span>
+                <span className={'ml-3'}>{new Date(segmentInfo.departure).toLocaleTimeString("en-US", {hour: '2-digit', minute:'2-digit'})}</span>
             </div>
             <div className={'transport-segment-body m-3 '}>
                 <div className={'ml-3 border-black p-1 bg-light-blue'}>
